@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package syncers.t2_order;
+package proto.syncers.t2_order;
 
 message Order {
   int64 branch_id = 1;

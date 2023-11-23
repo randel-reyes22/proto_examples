@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package syncers.picker_app;
+package proto.syncers.picker_app;
 
 message Setting {
   bool enable_picker_app = 1;
