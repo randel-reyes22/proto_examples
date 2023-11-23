@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package syncers.t2_order;
+
+message Order {
+  int64 branch_id = 1;
+  string status = 2;
+  int64 account_id = 3;
+  int64 t2_order_id = 4;
+  string reference = 5;
+  string user_type = 6;
+  int32 total_quantity = 7;
+  double subtotal = 8;
+  string delivery_date = 9;
+  string delivery_from = 10;
+  string delivery_to = 11;
+  string order_date = 12;
+  string barcode = 13;
+  string agent_name = 14;
+  repeated OrderLine order_lines = 15;
+  Customer customer = 16;
+  message Customer {
+    string first_name = 1;
+    string last_name = 2;
+    string store_name = 3;
+    string store_address = 4;
+    string mobile_phone = 5;
+  }
+}
+
+message OrderLine {
+  int64 product_id = 1;
+  string unit_name = 2;
+  string uom_code = 3;
+  string product_name = 4;
+  string product_sku = 5;
+  double cost = 6;
+  double retail_price = 7;
+  int32 quantity = 8;
+  double subtotal = 9;
+  string product_barcode = 10;
+  repeated ProductCategories product_categories = 11;
+  string product_image_online = 12;
+}
+
+message ProductCategories {
+  string name = 1;
+}
+
