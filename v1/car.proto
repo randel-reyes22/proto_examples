@@ -1,5 +1,6 @@
-syntax =  "proto3"
-package v1.car
+syntax = "proto3";
+
+package v1.car;
 
 message Car {
  string brand = 1;
